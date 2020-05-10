@@ -32,7 +32,7 @@ Next download and extract https://gerrit.omnirom.org/changes/android_build~33182
 Finally execute these:
 
 ```
-build/envsetup.sh
+. build/envsetup.sh
 export ALLOW_MISSING_DEPENDENCIES=true
 export LC_ALL=C
 lunch omni_hotdog-eng
