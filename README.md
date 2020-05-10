@@ -8,27 +8,28 @@ It was released in September 2019.
 
 ## Compile
 
-First download omni-9.0 tree:
+First download the platform_manifest_twrp_omni tree:
 
 ```
-repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
+repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
 ```
-Then add these string to .repo/manifests/remove.xml
 
-
-Then add these projects to .repo/local_manifests/roomservice.xml (If you don't have it, you can add them to .repo/manifest.xml): 
+Then create `.repo/local_manifests/roomservice.xml` and add the following: 
 
 ```xml
-<project name="mauronofrio/android_device_oneplus_hotdog_TWRP" path="device/oneplus/hotdog" remote="github" revision="android-9.0" />
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="kimocoder/android_device_oneplus_hotdog_unified_TWRP" path="device/oneplus/hotdog" remote="github" revision="master" />
+</manifest>
 ```
 
-Now you can sync your source:
+Now sync your source:
 
 ```
 repo sync
 ```
 
-To auotomatic make the twrp installer, you need to import this commit in the build/make path: https://gerrit.omnirom.org/#/c/android_build/+/33182/
+Next download and extract https://gerrit.omnirom.org/changes/android_build~33182/revisions/5/files/core%2FMakefile/download. Rename extracted file to `Makefile` and copy to `build/make/core`.
 
 Finally execute these:
 
