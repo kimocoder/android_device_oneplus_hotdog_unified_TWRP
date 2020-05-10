@@ -41,10 +41,10 @@ lunch omni_hotdog-eng
 mka adbd recoveryimage 
 ```
 
-To test it:
+To flash it, you must boot TWRP from https://forum.xda-developers.com/oneplus-7t/development/recovery-unofficial-twrp-recovery-t3976961. Once TWRP has booted, go to `Advanced->ADB Sideload->Swipe to Start Sideload` and sideload `out/target/product/hotdog/recovery-installer.zip`:
 
 ```
-fastboot boot out/target/product/hotdog/recovery.img
+adb sideload out/target/product/hotdog/recovery-installer.zip
 ```
 
 Kernel Source: precompiled stock one
