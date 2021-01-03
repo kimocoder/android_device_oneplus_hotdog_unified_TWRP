@@ -17,7 +17,7 @@ Then create `.repo/local_manifests/roomservice.xml` and add the following:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="sean6541/android_device_oneplus_hotdog_unified_TWRP" path="device/oneplus/hotdog" remote="github" revision="master" />
+  <project name="kimocoder/android_device_oneplus_hotdog_unified_TWRP" path="device/oneplus/hotdog" remote="github" revision="master" />
 </manifest>
 ```
 
